@@ -1,0 +1,416 @@
+/* Universal styles */
+
+body {
+  font-size: .75rem;
+  font-family: "Hind", sans-serif;
+  max-width: 100%;
+  line-height: 1.3rem;
+}
+
+body * {
+  color: hsla(210, 10%, 10%, 1);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-top: 32px;
+  text-align: center;
+  color: hsla(210, 40%, 30%, 1);
+}
+
+h3 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin-bottom: 8px;
+  font-weight: normal;
+  color: hsla(30, 100%, 60%, 1);
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  padding-right: 24px;
+}
+
+li a {
+  margin: auto 0 auto 16px;
+}
+
+.mobile {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.main {
+  width: 60%;
+  height: auto;
+  padding: 32px 24px;
+}
+
+.container,
+.main * {
+  max-width: 100%;
+  height: auto;
+}
+
+.secondary {
+  width: 40%;
+}
+
+.item img {
+  width: 35%;
+  height: auto;
+  padding: 16px;
+}
+
+.item text {
+  width: 65%;
+}
+
+/* universal styles for mobile phones and small tablets */
+
+@media only screen and (max-width: 600px) {
+  .mobile {
+    display: flex;
+  }
+
+  .desktop {
+    display: none;
+  }
+
+  .main {
+    width: 100%;
+    padding: 0;
+  }
+
+  .container {
+    border-bottom: 1px solid hsla(210, 54%, 78%, 1);
+  }
+
+  h2 {
+    margin-bottom: 16px;
+    color: hsla(30, 100%, 50%, 1);
+  }
+}
+
+
+/* header */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  position: fixed;
+  z-index: 5;
+  background-color: hsla(0, 0%, 100%, 1);
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid hsla(210, 50%, 60%, 1);;
+}
+
+nav.menu  {
+  font-size: .9rem;
+}
+
+nav.menu a {
+  color: hsla(210, 40%, 30%, 1);
+}
+
+.logo {
+  padding-left: 24px;
+}
+
+.logo span {
+  line-height: 32px;
+  margin: 16px 0px;
+  font-size: 1rem;
+}
+
+.academy {
+  color: hsla(30, 100%, 60%, 1);
+}
+
+nav.menu a:hover{
+  color: hsla(30, 100%, 60%, 1);
+}
+
+/* header styling for mobile phones and small tablets */
+
+header.mobile {
+  justify-content: space-around;
+}
+
+
+/* banner */
+
+h1 {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  margin-bottom: 30px;
+  color: hsla(210, 40%, 30%, 1);
+}
+
+.banner {
+  margin-top: 64px;
+  background-color: hsla(210, 54%, 78%, 1);
+}
+
+.presentation {
+  width: 35%;
+}
+
+.banner h3 {
+  color: hsla(210, 40%, 30%, 1);
+}
+
+a.button {
+  display: block;
+  padding: 8px 0;
+  color: hsla(0, 0%, 100%, 1);
+  background-color: hsla(30, 100%, 60%, 1);
+  text-align: center;
+  width: 90%;
+  margin-top: 30px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid hsla(30, 100%, 40%, 1);
+}
+
+a.button:hover {
+  color: hsla(30, 100%, 40%, 1);
+  background-color: hsla(30, 100%, 80%, 1);
+}
+
+/* banner styling for mobile phones and small tablets */
+
+@media only screen and (max-width: 600px) {
+  .banner {
+    flex-direction: column;
+  }
+
+  .secondary.presentation {
+    width: 100%;
+    padding: 32px 0;
+  }
+
+  .secondary.presentation div {
+    padding: 0 16px;
+  }
+
+  .button {
+    width: 100%;
+  }
+}
+
+
+/* about section */
+
+.about a {
+  display: block;
+}
+
+.about h2 {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.about .main {
+  border-right: 1px solid hsla(210, 54%, 78%, 1);
+}
+
+.description {
+  width: 90%;
+}
+
+.author {
+  margin-top: 1rem;
+  font-weight: 600;
+}
+
+.read-more {
+  margin-top: .75rem;
+  color: hsla(210, 100%, 60%, 1);
+}
+
+.info .item {
+  border-bottom: 1px solid hsla(210, 54%, 78%, 1);
+}
+
+.info .item:last-child {
+  background-color: hsla(210, 54%, 78%, .3);
+}
+
+/* about section styling for mobile phones and small tablets */
+
+@media only screen and (max-width: 600px) {
+  .info{
+    width: 100%;
+  }
+
+  .info .item {
+    flex-direction: column;
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0);
+    align-items: flex-start;
+    padding: 16px;
+  }
+
+  .item img {
+    width: 100%;
+    padding: 0;
+  }
+
+  .text {
+    margin: 16px 16px 0 16px;
+  }
+
+  .info .item:last-child {
+    background-color: hsla(0, 0%, 100%, 1);
+  }
+}
+
+
+/* catalog */
+
+.catalog {
+  background-color: hsla(210, 54%, 78%, 1);
+}
+
+.catalog .content {
+  flex-wrap: wrap;
+  padding: 16px 56px;
+
+}
+
+.line {
+  align-items: flex-start;
+  height: 300px;
+  margin-bottom: 32px;
+}
+
+.course {
+  margin: 16px;
+  height: 100%;
+  background-color: hsla(0, 0%, 100%, 1);
+}
+
+.course img {
+  width: 100%;
+}
+
+.course .text {
+  margin: 16px 16px 24px 16px;
+}
+
+.course:hover {
+  background-color: hsla(30, 100%, 93%, 1);
+}
+
+.type {
+  margin: 8px 0;
+  color: hsla(210, 50%, 60%, 1);
+}
+
+/* catalog styling for mobile phones and small tablets */
+
+@media only screen and (max-width: 600px) {
+  .catalog {
+    background-color: hsla(0, 0%, 100%, 1);
+    padding: 0 16px 32px 16px;
+  }
+
+  .class {
+    background-color: hsla(210, 54%, 78%, 1);
+    padding: 16px 0 24px 16px;
+    margin-bottom: 8px;
+    border-radius: 3px;
+  }
+
+  div.courses {
+    flex-direction: column;
+  }
+
+  .catalog h3 {
+    margin: 0;
+    color: hsla(0, 0%, 100%, 1);
+  }
+
+  .class:hover{
+    border: 1px solid hsla(210, 40%, 30%, 1);
+    background-color: hsla(210, 30%, 95%, 1);
+    margin-bottom: 7px;
+  }
+
+  .class:hover h3{
+    color: hsla(210, 40%, 30%, 1);
+  }
+}
+
+
+/* thesis exhibit */
+
+.thesis .content {
+  align-items: flex-start;
+}
+
+.thesis .secondary {
+  padding-top: 32px;
+}
+
+.thesis .secondary a:first-child {
+  background-color: hsla(210, 54%, 78%, .3);
+}
+
+.thesis .item:hover h3 {
+  text-decoration: underline;
+}
+
+/* thesis exhibit for mobile phones and small tablets */
+
+@media only screen and (max-width: 600px) {
+  video {
+    margin-bottom: 24px;
+  }
+
+  .thesis {
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0);
+  }
+}
+
+
+/* footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 0 16px 24px;
+  border-top: 1px solid hsla(210, 54%, 78%, 1);
+  font-size: .6rem;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+/* footer styling for mobile phones and small tablets */
+
+@media only screen and (max-width: 600px) {
+  footer {
+    border-top: 1px solid hsla(0, 0%, 100%, 0);
+  }
+}
